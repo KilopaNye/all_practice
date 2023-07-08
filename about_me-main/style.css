@@ -1,0 +1,118 @@
+/*背景圖-瑞克阿公*/
+.backimg{
+    background-image: url("rgs.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+
+}
+/*WEHELP申請書標題*/
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    color:white;
+    text-align: center;
+    background-color: rgb(62, 57, 92);
+    margin:8px;
+    padding:3px;
+    border-radius: 5px;
+    font-family: Microsoft JhengHei;
+}
+/*整體內容模塊及透明底圖*/
+.container{
+    overflow:auto;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    width:65%;
+    height:100%;
+    align-items: center;
+    background-color: rgba(255, 255, 255,0.3);
+    background-position:center;
+    margin:0 auto;
+    border-radius: 1px;
+    font-family: Microsoft JhengHei;
+}
+/*內容方塊*/
+.box{
+    font-size: 15px;
+    flex:none;
+    width:63%;
+    background-color: rgba(215, 225, 255 ,0.99);
+    border:2px solid rgb(37, 35, 88 ,);
+    margin:6px;
+    padding:10px 12px 10px 12px;
+    border-radius: 3px;
+}
+/*讓上方邊框產生距離*/
+.mgUp{
+    margin-top: 20px;
+}
+/*讓最下面離邊框有距離*/
+.mgDown{
+    margin-bottom: 50px;
+}
+/*BOX內的題目標題*/
+.h3ti{
+    font-size: 17px;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing:5px;
+    line-height: 30px;
+}
+/*內容文字樣式*/
+.answer{
+    font-size:16px;
+    letter-spacing:4.5px;
+    line-height: 25px;
+}
+/*------------------------------RWD--------------------------------*/
+@media(max-width:600px){
+    .backimg{
+        background-image: url("rgs2.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-size:cover;
+    }
+    .title{
+        font-size: 20px;
+        font-weight: bold;
+        color:white;
+        text-align: center;
+        background-color: rgb(62, 57, 92);
+        margin:8px;
+        padding:3px;
+        border-radius: 5px;
+        font-family: Microsoft JhengHei;
+    }
+    .container{
+        overflow:auto;
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        width:95%;
+        height:100%;
+        align-items: center;
+        background-color: rgba(255, 255, 255,0.3);
+        margin:0 auto;
+        border-radius: 1px;
+        font-family: Microsoft JhengHei;
+        border-radius: 3px;
+    }
+    .box{
+        font-size: 12px;
+        flex:none;
+        width:85%;
+        background-color: rgba(215, 225, 255 ,0.99);
+        border:2px solid rgb(37, 35, 88 ,);
+        margin:6px;
+        padding:10px 12px 10px 12px;
+        border-radius: 3px;
+    }
+    .h3ti{
+        font-size: 13px;
+        font-weight: bold;
+        text-align:left;
+    }
+
+}

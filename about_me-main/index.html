@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="rooms">name</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        // //who #container1
+        // //when click
+        // //what innerHTML = 'Alex'
+        // document.querySelector('#container1').addEventListener('click',function () {
+        //     document.querySelector('#cintainer1').innerHTML = 'Alex';
+        // });
+        // let container1 = document.querySelector('#container1')//這樣比較節省效能
+
+        // let name = 'meow';
+        // let yaer = 2018;
+        // let property = {
+        //     name:'name',
+        //     year: 2018
+        // }
+
+        // let arr = {
+        //     name:'Alex',
+        //     year:18
+        // }
+        // let barr = JSON.parse(JSON.stringify(arr));//轉成JSON後新增為新的檔案
+        // barr.name = 'apa';
+        // console.log(arr.name);
+        // let bunny = Symbol('可愛的兔子');
+        // console.log(bunny.description);
+        // const classMate = {
+        //     [Symbol('宜蓁')]: { score: 70, sleep: '3:00', drink: true },
+        //     [Symbol('chita')]: { score: 90, sleep: '20:00', drink: false },
+        //     [Symbol('宜蓁')]: { score: 100, sleep: '19:00', drink: false },
+        // }
+
+        // let property = {
+        //     [Symbol('name')]:{score:30, sleep:50}
+        // }
+        // let arr = Object.getOwnPropertySymbols(property).map(item => property[item])
+        // let name = '小白'
+        // console.log(`Hello ${name}`);
+
+        // let rooms = [
+        //     {
+        //         name: 'single room',
+        //         price: 50
+        //     }, {
+        //         name: 'double room',
+        //         price: 30
+        //     }
+        // ];
+
+        // let room = document.querySelector('.rooms');
+        // let str = "";
+
+        // rooms.forEach(function (item, index) {
+        //     let content = `第${index+1}筆房型的名稱是${item.name}</br>第${index+1}筆房型的價格是${item.price}</br>`;
+        //     str += content;
+        // });
+        // setTimeout(()=>{
+
+        // },1000);
+        // room.innerHTML = str;
+
+        class Car{
+            constructor(color){
+                this.color = color;
+                this.speed = 0;
+            };
+            runspeed(speed){
+                this.speed=speed;
+                console.log(`顏色${this.color}的車子用時速${this.speed}KM/HR的速度往前衝`)
+            }
+            stop(){
+                this.speed = 0;
+                console.log(`${this.color}色的車子已停止`);
+            }
+        };
+        // let car1=new Car('blue')
+        // car1.runspeed(50);
+        // car1.stop();
+
+
+        class Car2 extends Car{
+            constructor(color){
+                super(color);
+                this.battery = 100;
+            };
+            runspeed(speedo){
+                this.speed = speedo;
+                this.battery-=speedo;
+                console.log(`顏色${this.color}的車子用時速${this.speed}KM/HR的速度往前衝，並且花費了${this.speed}度的電力`)
+            };
+        };
+
+        let speedCar = new Car2('green');
+        speedCar.runspeed(50);
+        console.log(speedCar.battery)
+    </script>
+</body>
+
+</html>
